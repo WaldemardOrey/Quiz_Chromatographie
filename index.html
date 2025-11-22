@@ -12,21 +12,29 @@
         /* ================= ESTILO (CSS) ================= */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
 
-        body {
-            background-color: #02040a;
-            color: white;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            /* Fundo Grid Cyber */
-            background-image: 
-                linear-gradient(rgba(0, 10, 30, 0.9), rgba(0, 5, 15, 0.95)),
-                linear-gradient(0deg, transparent 24%, rgba(0, 229, 255, .05) 25%, rgba(0, 229, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 229, 255, .05) 75%, rgba(0, 229, 255, .05) 76%, transparent 77%, transparent),
-                linear-gradient(90deg, transparent 24%, rgba(0, 229, 255, .05) 25%, rgba(0, 229, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 229, 255, .05) 75%, rgba(0, 229, 255, .05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-        }
+       body {
+    background-color: #02040a;
+    color: white;
+    
+    /* MUDANÇA 1: Altura dinâmica e permitir rolagem */
+    min-height: 100vh; 
+    height: auto;      
+    overflow-y: auto;  /* Habilita o scroll vertical */
+    overflow-x: hidden; /* Evita scroll horizontal */
+
+    /* MUDANÇA 2: Alinhamento para não cortar o topo no celular */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Começa do topo, não do centro forçado */
+    padding: 20px 0; /* Um pouco de espaço em cima e embaixo */
+
+    /* Fundo Grid Cyber (Mantido Igual) */
+    background-image: 
+        linear-gradient(rgba(0, 10, 30, 0.9), rgba(0, 5, 15, 0.95)),
+        linear-gradient(0deg, transparent 24%, rgba(0, 229, 255, .05) 25%, rgba(0, 229, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 229, 255, .05) 75%, rgba(0, 229, 255, .05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(0, 229, 255, .05) 25%, rgba(0, 229, 255, .05) 26%, transparent 27%, transparent 74%, rgba(0, 229, 255, .05) 75%, rgba(0, 229, 255, .05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+}
 
         .container { width: 100%; max-width: 1000px; padding: 20px; text-align: center; position: relative; }
 
